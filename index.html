@@ -2,7 +2,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="apple-mobile-web-app-capable" content="yes"><meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="Avalanche 2015"><meta name="robots" content="noindex,nofollow">
+<meta http-equiv="Cache-Control" content="no-cache"><meta name="apple-mobile-web-app-title" content="Avalanche 2015"><meta name="robots" content="noindex,nofollow">
 <link rel="apple-touch-icon" href="icon-180.png"><link rel="manifest" href="manifest.json">
 <title>Avalanche 2015</title><style>
 :root{--navy:#0b2545;--ice:#eef4fb;--accent:#13a4ec;--hl:#fff3c4}
@@ -277,10 +277,15 @@ nav a.on{color:var(--accent);font-weight:600}
 <li>Tie: Mid-Fair Hockey Club Elite -0.01 (≈#5), Worcester Shamrocks +0.01 (≈#6)</li>
 <li>Worcester Shamrocks wins by 1: Mid-Fair Hockey Club Elite -0.08 (≈#5), Worcester Shamrocks +0.07 (≈#6)</li>
 
-</ul></section></main><nav><a href="#home" data-t="home"><span>🏒</span>Home</a><a href="#next5" data-t="next5"><span>📅</span>Next 5</a><a href="#rankings" data-t="rankings"><span>📊</span>Rankings</a><a href="#opponents" data-t="opponents"><span>🎯</span>Opponents</a><a href="#scores" data-t="scores"><span>🆕</span>Scores</a><a href="#significant" data-t="significant"><span>⭐</span>Big Games</a></nav><script>
+</ul></section></main><nav><a href="#home" data-t="home"><span>🏒</span>Home</a><a href="#next5" data-t="next5"><span>📅</span>Next 5</a><a href="#rankings" data-t="rankings"><span>📊</span>Rankings</a><a href="#opponents" data-t="opponents"><span>🎯</span>Opponents</a><a href="#scores" data-t="scores"><span>🆕</span>Scores</a><a href="#significant" data-t="significant"><span>⭐</span>Big Games</a></nav><script>const APP_VERSION="1791078764";
 function show(t){document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===t));
  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.t===t));
  history.replaceState(null,'','#'+t); window.scrollTo(0,0);}
 document.querySelectorAll('nav a').forEach(a=>a.onclick=e=>{e.preventDefault();show(a.dataset.t);});
 show((location.hash||'#home').slice(1));
+// Auto-refresh: when opened or brought back to the screen, reload if a newer version has been published
+function checkNew(){fetch('version.txt?t='+Date.now(),{cache:'no-store'}).then(r=>r.text()).then(v=>{
+ v=v.trim(); if(v && v!==APP_VERSION){location.replace(location.pathname+'?v='+v+location.hash);}}).catch(()=>{});}
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)checkNew();});
+checkNew();
 </script></body></html>
