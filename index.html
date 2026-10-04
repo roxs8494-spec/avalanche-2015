@@ -31,6 +31,9 @@ mark{background:#ffe066;padding:2px 4px;border-radius:4px}
 .hero .big{font-size:34px;font-weight:700}
 .hero .lbl{font-size:11px;opacity:.8;text-transform:uppercase;letter-spacing:.5px}
 .hero .stats{display:flex;justify-content:space-between;font-size:13px;opacity:.9}
+.hero .grid{display:flex;justify-content:space-between;gap:8px;font-size:13px}
+.hero .grid>div{flex:1}.hero .grid>div:nth-child(2){text-align:center}.hero .grid>div:last-child{text-align:right}
+.hero .v{font-weight:600}.hero .v2{opacity:.85;margin-top:3px}
 .up{color:#7CFC9A}.down{color:#ff9b9b}
 nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #d9e1ea;display:flex;
     padding-bottom:env(safe-area-inset-bottom);z-index:10}
@@ -42,12 +45,13 @@ nav a.on{color:var(--accent);font-weight:600}
 <main><section id="home"><div class="hero"><div class="team">North Jersey Avalanche 11U AAA</div>
 <div class="ranks"><div class="box"><div class="lbl">Last week</div><div class="big">#23</div></div>
 <div class="box"><div class="lbl">Predicted</div><div class="big">#23</div><div>—</div></div></div>
-<div class="stats"><span>6-5-2</span><span>Streak <b>—</b></span>
-<span>AGD +0.76</span></div>
-<div class="stats" style="margin-top:6px"><span>Rating 89.86 → 89.94</span>
-<span>Sched 89.10 → 89.10</span></div></div><h2>What it means for North Jersey Avalanche</h2>
+<div class="grid"><div><div class="v">6-5-2</div><div class="v2">Streak <b>W3</b></div></div>
+<div><div class="v">Rating 89.86</div><div class="v2">→ 89.94 predicted</div></div>
+<div><div class="v">AGD +0.76</div><div class="v2">Sched 89.10 → 89.18</div></div></div></div><h2>What it means for North Jersey Avalanche</h2>
 <ul>
 <li>Past opponents with games pending (changes our schedule strength): Philadelphia Jr Flyers +0.89, Chicago Mission -0.46, Philadelphia Flyers Elite +0.43, Philadelphia Little Flyers +0.18, Providence Capitals (Elite) -0.10, Pittsburgh Penguins Elite (Mueller) +0.08, Cleveland Barons +0.07, PAL Jr Islanders (Blue) +0.06</li>
+<li><b>Current streak: W3</b></li>
+<li>Strength of schedule: 89.10 now → ≈89.18 predicted (+0.08; includes games not yet counted and opponents&#x27; predicted ratings)</li>
 <li><b>Predicted for next MHR update: rating ≈ 89.94 (+0.08), rank ≈ #23 (last week #23)</b></li>
 <li>⚠️ <b>Past games with no score posted</b> (won&#x27;t count until someone enters the score): Sep 27 11:00 am vs Philadelphia Hockey Club 11U AAA</li>
 <li>📅 <b>27 upcoming games are on TeamSnap but not on MHR</b> (included below where they fall in the next 5)</li>
@@ -55,12 +59,12 @@ nav a.on{color:var(--accent);font-weight:600}
 </ul></section><section id="next5"><h3>North Jersey Avalanche — next 5 games</h3>
 <p>Starting point: predicted rating 89.94, rank #23. Margins are from our perspective (+ = we win by).</p>
 <div class="tw"><table>
-<tr><th>Date</th><th>Opponent</th><th>Opp rank / rating</th><th>Expected</th><th>Rating goes up if</th><th>Move up a spot</th><th>Drop a spot</th></tr>
-<tr><td>Oct 4 10:00 am</td><td>Mid-Fairfield Hockey Club (Elite)</td><td>#5 / 93.00</td><td>-3.06</td><td>lose by 3 or less</td><td>lose by 2 or less → #22</td><td>lose by 5+ → #24</td></tr>
-<tr><td>Oct 4 1:00 pm</td><td>Mid-Fairfield Hockey Club (Elite)</td><td>#5 / 93.00</td><td>-3.06</td><td>lose by 3 or less</td><td>lose by 2 or less → #22</td><td>lose by 5+ → #24</td></tr>
-<tr><td>Oct 9 10:30 am</td><td>Ohio Blue Jackets</td><td>#40 / 88.36</td><td>+1.58</td><td>win by 2+</td><td>win by 2+ → #22</td><td>lose by 1+ → #24</td></tr>
-<tr><td>Oct 9 4:45 pm</td><td>Rochester Saints</td><td>#36 / 88.73</td><td>+1.23</td><td>win by 2+</td><td>win by 2+ → #22</td><td>lose by 1+ → #24</td></tr>
-<tr><td>Oct 10 10:00 am</td><td>Buffalo Jr Sabres</td><td>#21 / 90.11</td><td>-0.17</td><td>tie or better</td><td>tie or better → #22</td><td>lose by 2+ → #24</td></tr>
+<tr><th>Date</th><th>Opponent</th><th>Opp streak</th><th>Opp rank / rating</th><th>Expected</th><th>Rating goes up if</th><th>Move up a spot</th><th>Drop a spot</th></tr>
+<tr><td>Oct 4 10:00 am</td><td>Mid-Fair Hockey Club Elite</td><td>W6</td><td>#5 / 93.00</td><td>-3.06</td><td>lose by 3 or less</td><td>lose by 2 or less → #22</td><td>lose by 5+ → #24</td></tr>
+<tr><td>Oct 4 1:00 pm</td><td>Mid-Fair Hockey Club Elite</td><td>W6</td><td>#5 / 93.00</td><td>-3.06</td><td>lose by 3 or less</td><td>lose by 2 or less → #22</td><td>lose by 5+ → #24</td></tr>
+<tr><td>Oct 9 10:30 am</td><td>Ohio Blue Jackets</td><td>L1</td><td>#40 / 88.36</td><td>+1.58</td><td>win by 2+</td><td>win by 2+ → #22</td><td>lose by 1+ → #24</td></tr>
+<tr><td>Oct 9 4:45 pm</td><td>Rochester Saints</td><td>L1</td><td>#36 / 88.73</td><td>+1.23</td><td>win by 2+</td><td>win by 2+ → #22</td><td>lose by 1+ → #24</td></tr>
+<tr><td>Oct 10 10:00 am</td><td>Buffalo Jr Sabres</td><td>L1</td><td>#21 / 90.11</td><td>-0.17</td><td>tie or better</td><td>tie or better → #22</td><td>lose by 2+ → #24</td></tr>
 </table></div>
 <p><i>No conflicts between MHR and TeamSnap (same date and time, different opponent).</i></p>
 
@@ -72,7 +76,7 @@ nav a.on{color:var(--accent);font-weight:600}
 <tr><td>2</td><td>1</td><td>⬆️ 1</td><td>Pittsburgh Penguins Elite (Mueller) 11U AAA</td><td>94.48</td><td>94.56</td></tr>
 <tr><td>3</td><td>3</td><td>—</td><td>Lovell Winter Club (Elite) 11U AAA</td><td>93.27</td><td>93.19</td></tr>
 <tr><td>4</td><td>7</td><td>⬇️ 3</td><td>Boston Jr Eagles (Elite) 11U AAA</td><td>93.22</td><td>92.48</td></tr>
-<tr><td>5</td><td>4</td><td>⬆️ 1</td><td>Mid-Fairfield Hockey Club (Elite) 11U AAA</td><td>93.00</td><td>93.00</td></tr>
+<tr><td>5</td><td>4</td><td>⬆️ 1</td><td>Mid-Fair Hockey Club Elite</td><td>93.00</td><td>93.00</td></tr>
 <tr><td>6</td><td>5</td><td>⬆️ 1</td><td>Worcester Shamrocks 11U AAA</td><td>92.91</td><td>92.71</td></tr>
 <tr><td>7</td><td>6</td><td>⬆️ 1</td><td>South Shore Kings (Elite) 11U AAA</td><td>92.59</td><td>92.56</td></tr>
 <tr><td>8</td><td>8</td><td>—</td><td>Top Gun (Elite) 11U AAA</td><td>92.25</td><td>92.20</td></tr>
@@ -130,7 +134,7 @@ nav a.on{color:var(--accent);font-weight:600}
 <tr><th>Opponent</th><th>Rank / rating</th><th>Expected</th><th>Win by 1</th><th>Tie</th><th>Lose by 1</th><th>Lose by 3</th><th>Open weekend dates</th></tr>
 <tr><td>Pittsburgh Penguins Elite (Mueller) (PA)</td><td>#2 / 94.48</td><td>-4.62</td><td>+0.40 → #20</td><td>+0.33 → #20</td><td>+0.26 → #20</td><td>+0.12 → #22</td><td>Sun Oct 11, Sun Oct 18, Sat Oct 24, Sun Oct 25, Sat Nov 28, Sun Nov 29 (+9 more)</td></tr>
 <tr><td>Lovell Winter Club (Elite) (MA)</td><td>#3 / 93.27</td><td>-3.25</td><td>+0.30 → #20</td><td>+0.23 → #20</td><td>+0.16 → #22</td><td>+0.02 → #22</td><td>Sun Oct 11, Sun Oct 18, Sat Oct 24, Sun Oct 25, Sat Nov 28, Sun Nov 29 (+9 more)</td></tr>
-<tr><td>Mid-Fairfield Hockey Club (Elite) (CT)</td><td>#5 / 93.00</td><td>-3.06</td><td>+0.29 → #20</td><td>+0.22 → #21</td><td>+0.15 → #22</td><td>+0.00 → #23</td><td>Sat Oct 24, Sun Oct 25, Sat Nov 28, Sun Nov 29, Sat Dec 12, Sun Dec 13 (+7 more)</td></tr>
+<tr><td>Mid-Fair Hockey Club Elite (CT)</td><td>#5 / 93.00</td><td>-3.06</td><td>+0.29 → #20</td><td>+0.22 → #21</td><td>+0.15 → #22</td><td>+0.00 → #23</td><td>Sat Oct 24, Sun Oct 25, Sat Nov 28, Sun Nov 29, Sat Dec 12, Sun Dec 13 (+7 more)</td></tr>
 <tr><td>Worcester Shamrocks (MA)</td><td>#6 / 92.91</td><td>-2.77</td><td>+0.27 → #20</td><td>+0.20 → #21</td><td>+0.13 → #22</td><td>-0.02 → #23</td><td>Sun Oct 11, Sun Oct 18, Sat Oct 24, Sun Oct 25, Sat Nov 28, Sun Nov 29 (+8 more)</td></tr>
 <tr><td>South Shore Kings (Elite) (MA)</td><td>#7 / 92.59</td><td>-2.62</td><td>+0.26 → #20</td><td>+0.19 → #21</td><td>+0.12 → #22</td><td>-0.03 → #23</td><td>Sun Oct 11, Sun Oct 18, Sat Oct 24, Sun Oct 25, Sat Nov 28, Sun Nov 29 (+8 more)</td></tr>
 <tr><td>Boston Jr Eagles (Elite) (MA)</td><td>#4 / 93.22</td><td>-2.54</td><td>+0.25 → #20</td><td>+0.18 → #21</td><td>+0.11 → #22</td><td>-0.03 → #23</td><td>Sun Oct 11, Sat Oct 24, Sun Oct 25, Sat Nov 28, Sun Nov 29, Sun Dec 13 (+6 more)</td></tr>
@@ -237,40 +241,40 @@ nav a.on{color:var(--accent);font-weight:600}
 <li>Boston Jr Eagles (Elite) wins by 1: Pittsburgh Penguins Elite (Mueller) -0.16 (≈#2), Boston Jr Eagles (Elite) +0.25 (≈#3)</li>
 </ul>
 <h2>Significant Game (Scheduled)</h2>
-<p><b>Oct 9 7:50 am — Mid-Fairfield Hockey Club (Elite) vs St Louis Blues</b> · Upcoming</p>
+<p><b>Oct 9 7:50 am — Mid-Fair Hockey Club Elite vs St Louis Blues</b> · Upcoming</p>
 <ul>
-<li>#5 Mid-Fairfield Hockey Club (Elite) 11U AAA (CT) — 11-2-0, rating 93.00, AGD +1.53, schedule 91.46</li>
+<li>#5 Mid-Fair Hockey Club Elite (CT) — 11-2-0, rating 93.00, AGD +1.53, schedule 91.46</li>
 <li>#15 St Louis Blues 11U AAA (MO) — 10-5-0, rating 91.18, AGD +1.93, schedule 89.24</li>
-<li><b>Expected differential:</b> Mid-Fairfield Hockey Club (Elite) by 1.82 goals</li>
+<li><b>Expected differential:</b> Mid-Fair Hockey Club Elite by 1.82 goals</li>
 <li><b>Potential impacts:</b></li>
-<li>Mid-Fairfield Hockey Club (Elite) wins by 4: Mid-Fairfield Hockey Club (Elite) +0.16 (≈#5), St Louis Blues -0.14 (≈#15)</li>
-<li>Mid-Fairfield Hockey Club (Elite) wins by 1: Mid-Fairfield Hockey Club (Elite) -0.06 (≈#5), St Louis Blues +0.05 (≈#15)</li>
-<li>Tie: Mid-Fairfield Hockey Club (Elite) -0.13 (≈#6), St Louis Blues +0.11 (≈#15)</li>
-<li>St Louis Blues wins by 1: Mid-Fairfield Hockey Club (Elite) -0.20 (≈#6), St Louis Blues +0.18 (≈#15)</li>
+<li>Mid-Fair Hockey Club Elite wins by 4: Mid-Fair Hockey Club Elite +0.16 (≈#5), St Louis Blues -0.14 (≈#15)</li>
+<li>Mid-Fair Hockey Club Elite wins by 1: Mid-Fair Hockey Club Elite -0.06 (≈#5), St Louis Blues +0.05 (≈#15)</li>
+<li>Tie: Mid-Fair Hockey Club Elite -0.13 (≈#6), St Louis Blues +0.11 (≈#15)</li>
+<li>St Louis Blues wins by 1: Mid-Fair Hockey Club Elite -0.20 (≈#6), St Louis Blues +0.18 (≈#15)</li>
 </ul>
 <h2>Significant Game (Scheduled)</h2>
-<p><b>Oct 10 11:00 am — Mid-Fairfield Hockey Club (Elite) vs Chicago Fury</b> · Upcoming</p>
+<p><b>Oct 10 11:00 am — Mid-Fair Hockey Club Elite vs Chicago Fury</b> · Upcoming</p>
 <ul>
-<li>#5 Mid-Fairfield Hockey Club (Elite) 11U AAA (CT) — 11-2-0, rating 93.00, AGD +1.53, schedule 91.46</li>
+<li>#5 Mid-Fair Hockey Club Elite (CT) — 11-2-0, rating 93.00, AGD +1.53, schedule 91.46</li>
 <li>#17 Chicago Fury 11U AAA (IL) — 7-6-0, rating 90.87, AGD +0.30, schedule 90.56</li>
-<li><b>Expected differential:</b> Mid-Fairfield Hockey Club (Elite) by 2.13 goals</li>
+<li><b>Expected differential:</b> Mid-Fair Hockey Club Elite by 2.13 goals</li>
 <li><b>Potential impacts:</b></li>
-<li>Mid-Fairfield Hockey Club (Elite) wins by 4: Mid-Fairfield Hockey Club (Elite) +0.13 (≈#5), Chicago Fury -0.13 (≈#17)</li>
-<li>Mid-Fairfield Hockey Club (Elite) wins by 1: Mid-Fairfield Hockey Club (Elite) -0.08 (≈#5), Chicago Fury +0.08 (≈#16)</li>
-<li>Tie: Mid-Fairfield Hockey Club (Elite) -0.15 (≈#6), Chicago Fury +0.15 (≈#16)</li>
-<li>Chicago Fury wins by 1: Mid-Fairfield Hockey Club (Elite) -0.22 (≈#6), Chicago Fury +0.22 (≈#16)</li>
+<li>Mid-Fair Hockey Club Elite wins by 4: Mid-Fair Hockey Club Elite +0.13 (≈#5), Chicago Fury -0.13 (≈#17)</li>
+<li>Mid-Fair Hockey Club Elite wins by 1: Mid-Fair Hockey Club Elite -0.08 (≈#5), Chicago Fury +0.08 (≈#16)</li>
+<li>Tie: Mid-Fair Hockey Club Elite -0.15 (≈#6), Chicago Fury +0.15 (≈#16)</li>
+<li>Chicago Fury wins by 1: Mid-Fair Hockey Club Elite -0.22 (≈#6), Chicago Fury +0.22 (≈#16)</li>
 </ul>
 <h2>Significant Game (Scheduled)</h2>
-<p><b>Oct 10 5:40 pm — Mid-Fairfield Hockey Club (Elite) vs Worcester Shamrocks</b> · Upcoming</p>
+<p><b>Oct 10 5:40 pm — Mid-Fair Hockey Club Elite vs Worcester Shamrocks</b> · Upcoming</p>
 <ul>
-<li>#5 Mid-Fairfield Hockey Club (Elite) 11U AAA (CT) — 11-2-0, rating 93.00, AGD +1.53, schedule 91.46</li>
+<li>#5 Mid-Fair Hockey Club Elite (CT) — 11-2-0, rating 93.00, AGD +1.53, schedule 91.46</li>
 <li>#6 Worcester Shamrocks 11U AAA (MA) — 9-5-0, rating 92.91, AGD +1.85, schedule 91.05</li>
-<li><b>Expected differential:</b> Mid-Fairfield Hockey Club (Elite) by 0.09 goals</li>
+<li><b>Expected differential:</b> Mid-Fair Hockey Club Elite by 0.09 goals</li>
 <li><b>Potential impacts:</b></li>
-<li>Mid-Fairfield Hockey Club (Elite) wins by 3: Mid-Fairfield Hockey Club (Elite) +0.21 (≈#5), Worcester Shamrocks -0.19 (≈#6)</li>
-<li>Mid-Fairfield Hockey Club (Elite) wins by 1: Mid-Fairfield Hockey Club (Elite) +0.07 (≈#5), Worcester Shamrocks -0.06 (≈#6)</li>
-<li>Tie: Mid-Fairfield Hockey Club (Elite) -0.01 (≈#5), Worcester Shamrocks +0.01 (≈#6)</li>
-<li>Worcester Shamrocks wins by 1: Mid-Fairfield Hockey Club (Elite) -0.08 (≈#5), Worcester Shamrocks +0.07 (≈#6)</li>
+<li>Mid-Fair Hockey Club Elite wins by 3: Mid-Fair Hockey Club Elite +0.21 (≈#5), Worcester Shamrocks -0.19 (≈#6)</li>
+<li>Mid-Fair Hockey Club Elite wins by 1: Mid-Fair Hockey Club Elite +0.07 (≈#5), Worcester Shamrocks -0.06 (≈#6)</li>
+<li>Tie: Mid-Fair Hockey Club Elite -0.01 (≈#5), Worcester Shamrocks +0.01 (≈#6)</li>
+<li>Worcester Shamrocks wins by 1: Mid-Fair Hockey Club Elite -0.08 (≈#5), Worcester Shamrocks +0.07 (≈#6)</li>
 
 </ul></section></main><nav><a href="#home" data-t="home"><span>🏒</span>Home</a><a href="#next5" data-t="next5"><span>📅</span>Next 5</a><a href="#rankings" data-t="rankings"><span>📊</span>Rankings</a><a href="#opponents" data-t="opponents"><span>🎯</span>Opponents</a><a href="#scores" data-t="scores"><span>🆕</span>Scores</a><a href="#significant" data-t="significant"><span>⭐</span>Big Games</a></nav><script>
 function show(t){document.querySelectorAll('section').forEach(s=>s.classList.toggle('on',s.id===t));
