@@ -70,7 +70,7 @@ video{width:100%;border-radius:10px;background:#000;display:block}
     <div class="row"><div><label>Date</label><input id="fDate" type="date"></div>
       <div><label>Home / away</label><select id="fHome"><option value="1">Home (vs)</option><option value="0">Away (at)</option></select></div></div>
     <label>Opponent</label><input id="fOpp" placeholder="e.g. Mid-Fair Elite">
-    <div class="row"><div><label>Period length (min)</label><input id="fLen" type="number" value="13" inputmode="numeric"></div>
+    <div class="row"><div><label>Period length (min)</label><input id="fLen" type="number" value="15" inputmode="numeric"></div>
       <div><label>Periods</label><input id="fPer" type="number" value="3" inputmode="numeric"></div></div>
     <label>Goalie</label><input id="fGoalie" placeholder="Name or #">
     <label>How are you tracking?</label>
@@ -196,7 +196,7 @@ function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt
 function newGame(mode){
  const opp=$('#fOpp').value.trim()||'Opponent', date=$('#fDate').value||new Date().toISOString().slice(0,10);
  let id=date+'_'+slug(opp); if(store.get('gt_game_'+id)) id+='-'+Date.now().toString(36).slice(-4);
- G={id,date,opponent:opp,home:$('#fHome').value==='1',periodLen:+$('#fLen').value||13,periods:+$('#fPer').value||3,otLen:5,
+ G={id,date,opponent:opp,home:$('#fHome').value==='1',periodLen:+$('#fLen').value||15,periods:+$('#fPer').value||3,otLen:5,
    goalie:$('#fGoalie').value.trim(),mode,events:[],cur:{p:1,str:'EV',on:true}};
  store.set('gt_last_goalie',G.goalie); save(); openGame(id);
 }
