@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512">
+<rect width="512" height="512" fill="#0b2545"/>
+<polygon points="256,70 430,380 82,380" fill="#ffffff"/>
+<polygon points="256,70 318,180 286,160 256,200 226,160 194,180" fill="#13a4ec"/>
+<text x="256" y="465" font-family="Helvetica" font-weight="bold" font-size="72" fill="#13a4ec" text-anchor="middle">NJA</text>
+</svg>
